@@ -1,0 +1,58 @@
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Optional: Set a specific font-family */
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: gray;
+    position: relative;
+    
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid black;
+    background-color: palevioletred; /* Unique color for section title region */
+    padding: 5px;
+    color: white; /* Adjust text color for visibility */
+}
+
+/* Desktop view */
+@media screen and (min-width: 992px) {
+    section {
+        width: 30%; /* Equal width for desktop view */
+        float: left;
+    }
+}
+
+/* Tablet view */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    section {
+        width: 48%; /* Equal width for the first two sections in tablet view */
+        float: left;
+}
+
+    section:nth-child(3) {
+        clear: both; /* Move the third section to a new row */
+        width: 100%;
+    }
+}
+
+/* Mobile view */
+@media screen and (max-width: 767px) {
+    section {
+        width: 100%; /* Each section takes up the entire row in mobile view */
+    }
+}
